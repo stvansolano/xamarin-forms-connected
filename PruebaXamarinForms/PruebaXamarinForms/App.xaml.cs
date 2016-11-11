@@ -9,16 +9,20 @@ namespace PruebaXamarinForms
 {
     public partial class App : Application
     {
+        private MainPage _mainPage;
+
         public App()
         {
+            _mainPage = new PruebaXamarinForms.MainPage();
+
             InitializeComponent();
 
-            MainPage = new PruebaXamarinForms.MainPage();
+            MainPage = _mainPage;
         }
 
         protected override void OnStart()
         {
-            // Handle when your app starts
+            _mainPage.Load();
         }
 
         protected override void OnSleep()
