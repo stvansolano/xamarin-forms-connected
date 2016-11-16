@@ -11,20 +11,23 @@ namespace PruebaXamarinForms
     {
         private MainPage _mainPage;
         private ControlsPage _controlsPage;
+        private ContactsPage _contactsPage;
 
         public App()
         {
             _mainPage = new MainPage();
             _controlsPage = new ControlsPage();
+            _contactsPage = new ContactsPage();
 
             InitializeComponent();
 
-            MainPage = _mainPage; //_controlsPage;
+            MainPage = _contactsPage; //_controlsPage;
+            // _mainPage;
         }
 
         protected override void OnStart()
         {
-            _mainPage.Load();
+            _contactsPage.Load();
         }
 
         protected override void OnSleep()

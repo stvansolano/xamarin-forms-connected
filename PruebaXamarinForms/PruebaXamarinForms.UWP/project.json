@@ -1,7 +1,9 @@
 ﻿{
   "dependencies": {
+    "Microsoft.Azure.Mobile.Client": "3.0.3",
+    "Microsoft.Bcl.Build": "1.0.21",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0",
-    "Xamarin.Forms": "2.0.0.6482"
+    "Xamarin.Forms": "2.3.0.49"
   },
   "frameworks": {
     "uap10.0": {}
