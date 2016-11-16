@@ -10,14 +10,16 @@ namespace PruebaXamarinForms
     public partial class App : Application
     {
         private MainPage _mainPage;
+        private ControlsPage _controlsPage;
 
         public App()
         {
-            _mainPage = new PruebaXamarinForms.MainPage();
+            _mainPage = new MainPage();
+            _controlsPage = new ControlsPage();
 
             InitializeComponent();
 
-            MainPage = _mainPage;
+            MainPage = _mainPage; //_controlsPage;
         }
 
         protected override void OnStart()
