@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PruebaXamarinForms.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,16 +14,16 @@ namespace PruebaXamarinForms
         private ControlsPage _controlsPage;
         private ContactsPage _contactsPage;
 
+        public Func<AzureClient, bool> OnAuthenticate { get; set; }
+
         public App()
         {
             _mainPage = new MainPage();
-            _controlsPage = new ControlsPage();
             _contactsPage = new ContactsPage();
 
             InitializeComponent();
 
-            MainPage = _contactsPage; //_controlsPage;
-            // _mainPage;
+            MainPage = _contactsPage;
         }
 
         protected override void OnStart()
